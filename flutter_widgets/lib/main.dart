@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-
-import 'onbordScreen.dart';
+import 'package:flutter_widgets/widgers/DateAndTime.dart';
+import 'package:flutter_widgets/widgers/Dateformat.dart';
+import 'package:flutter_widgets/widgers/GridView.dart';
+import 'package:flutter_widgets/widgers/cards.dart';
+import 'package:flutter_widgets/widgers/listview.buldar.dart';
+import 'widgers/onbordScreen.dart';
+import 'widgers/listwiew.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +34,26 @@ class HomeScreen extends StatelessWidget {
     widgetExample(
       title: 'PageView.builder',
       builder: (context) => const Onbordscreen(),
+    ),
+    widgetExample(
+      title: 'ListView',
+      builder: (context) => const Listwiew(),
+    ),
+    widgetExample(
+      title: 'ListViewBulder',
+      builder: (context) => const ListviewBulder(),
+    ),
+    widgetExample(
+      title: 'GridView',
+      builder: (context) => const Gridview(),
+    ),
+    widgetExample(
+      title: 'DateTimeFormet',
+      builder: (context) => const Dateandtime(),
+    ),
+    widgetExample(
+      title: 'Cards',
+      builder: (context) => const Cards(),
     ),
   ];
 
@@ -64,7 +89,7 @@ class HomeScreen extends StatelessWidget {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Onbordscreen(),
+                    builder: example[index].builder,
                   ),
                 );
               },
@@ -72,36 +97,6 @@ class HomeScreen extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-}
-
-class FullScreen extends StatelessWidget {
-  final widgetExample example;
-
-  const FullScreen({super.key, required this.example});
-
-  @override
-  Widget build(BuildContext context) {
-    return example.builder(context);
-  }
-}
-
-class DetailScreen extends StatelessWidget {
-  final widgetExample example;
-
-  const DetailScreen({super.key, required this.example});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(example.title),
-        elevation: 0,
-        backgroundColor: example.appBarColor ?? Theme.of(context).primaryColor,
-      ),
-      body: Hero(
-          tag: 'example_${example.title}', child: example.builder(context)),
     );
   }
 }

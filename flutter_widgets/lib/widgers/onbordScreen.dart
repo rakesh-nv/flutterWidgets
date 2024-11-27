@@ -42,6 +42,7 @@ class _OnbordscreenState extends State<Onbordscreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Column(
           children: [
@@ -71,14 +72,13 @@ class _OnbordscreenState extends State<Onbordscreen> {
                       SizedBox(height: 35),
                       Text(
                         contents[index].title,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       SizedBox(height: 35),
                       Text(
                         contents[index].description,
-
                       ),
                     ],
                   );
