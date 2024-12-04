@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/widgers/cards.dart';
 
 class ListviewBulder extends StatefulWidget {
   const ListviewBulder({super.key});
@@ -10,37 +11,87 @@ class ListviewBulder extends StatefulWidget {
 class _ListviewBulderState extends State<ListviewBulder> {
   @override
   Widget build(BuildContext context) {
-    var arrnames = [
-      'raman',
-      'rakesh',
-      'ramesh',
-      'naveen',
-      'john',
-      'james',
-      'jah'
-    ];
-
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('ListViewBulder'),
+    
+    final List<tile> Content = [
+      tile(
+        name: 'Rakesh',
       ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+      tile(
+        name: 'Rakesh',
+      ),
+    ];
+    return Scaffold(
+      appBar: AppBar(),
+      // ... existing code ...
       body: ListView.builder(
         itemBuilder: (context, index) {
-          return Padding(
-            padding: const EdgeInsets.only(left: 30),
-            child: Text(
-              arrnames[index],
-              style: const TextStyle(
-                fontSize: 21,
-                fontWeight: FontWeight.w500,
+          return InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => Cards(),
+                ),
+              );
+            },
+            child: Container(
+              decoration: BoxDecoration(
+                color: Colors.white10,
+                border: Border.all(color: Colors.grey),
+              ),
+              child: Padding(
+                padding: EdgeInsets.only(left: 30),
+                child: Row(
+                  children: [
+                    const CircleAvatar(
+                      radius: 25,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 40),
+                      child: Text(
+                        Content[index].name,
+                      ),
+                    ) // {{ edit_1 }}: Accessing name by index
+                  ],
+                ),
               ),
             ),
           );
         },
-        itemCount: arrnames.length,
+        itemCount: Content.length,
         itemExtent: 100,
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
+}
+
+class tile {
+  final String name;
+  final Icon? icon;
+
+  tile({
+    required this.name,
+    this.icon,
+  });
 }

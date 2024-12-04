@@ -4,6 +4,7 @@ import 'package:flutter_widgets/widgers/Dateformat.dart';
 import 'package:flutter_widgets/widgers/GridView.dart';
 import 'package:flutter_widgets/widgers/cards.dart';
 import 'package:flutter_widgets/widgers/listview.buldar.dart';
+import 'package:flutter_widgets/widgers/stack.dart';
 import 'widgers/onbordScreen.dart';
 import 'widgers/listwiew.dart';
 
@@ -31,6 +32,10 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<widgetExample> example = [
+    widgetExample(
+      title: 'Stack',
+      builder: (context) => const stackWidget(),
+    ),
     widgetExample(
       title: 'PageView.builder',
       builder: (context) => const Onbordscreen(),
