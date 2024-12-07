@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/widgers/DateAndTime.dart';
-import 'package:flutter_widgets/widgers/Dateformat.dart';
 import 'package:flutter_widgets/widgers/GridView.dart';
 import 'package:flutter_widgets/widgers/cards.dart';
 import 'package:flutter_widgets/widgers/listview.buldar.dart';
+import 'package:flutter_widgets/widgers/parllax.dart';
 import 'package:flutter_widgets/widgers/stack.dart';
 import 'widgers/onbordScreen.dart';
 import 'widgers/listwiew.dart';
 
 void main() {
-  runApp(const MyApp());
+  return runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,7 +25,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: HomeScreen(),
+      //home: HomeScreen(),
+      home: MyParllax(),
     );
   }
 }
@@ -60,6 +61,10 @@ class HomeScreen extends StatelessWidget {
       title: 'Cards',
       builder: (context) => const Cards(),
     ),
+    widgetExample(
+      title: 'parallax',
+      builder: (p0) => MyParllax(),
+    )
   ];
 
   HomeScreen({super.key});
