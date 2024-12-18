@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widgets/CustamWidgit/widgits/CustamWidget.dart';
+import 'package:flutter_widgets/responsive/homePage.dart';
 import 'package:flutter_widgets/widgers/DateAndTime.dart';
 import 'package:flutter_widgets/widgers/GridView.dart';
+import 'package:flutter_widgets/widgers/bottomNavBar.dart';
 import 'package:flutter_widgets/widgers/cards.dart';
+import 'package:flutter_widgets/widgers/dismissible.dart';
+import 'package:flutter_widgets/widgers/drawer.dart';
 import 'package:flutter_widgets/widgers/listview.buldar.dart';
 import 'package:flutter_widgets/widgers/parllax.dart';
+import 'package:flutter_widgets/widgers/snackBar.dart';
 import 'package:flutter_widgets/widgers/stack.dart';
 import 'widgers/onbordScreen.dart';
-import 'widgers/listwiew.dart';
 
 void main() {
-  return runApp(MyApp());
+  return runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -25,14 +30,29 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      //home: HomeScreen(),
-      home: MyParllax(),
+      home: HomeScreen(),
+      //home: HomePage(),
     );
   }
 }
 
 class HomeScreen extends StatelessWidget {
   final List<widgetExample> example = [
+    widgetExample(
+      title: 'Drawer',
+      builder: (context) => const DrawerWi(),
+    ), widgetExample(
+      title: 'SnackBar',
+      builder: (context) => const snackBar(),
+    ),
+    widgetExample(
+      title: 'Dismissible',
+      builder: (context) => const DismissibleWi(),
+    ),
+    // widgetExample(
+    //   title: 'Bottom Navigation bar',
+    //   builder: (context) => BottomNavBar(),
+    // ),
     widgetExample(
       title: 'Stack',
       builder: (context) => const stackWidget(),
@@ -41,10 +61,7 @@ class HomeScreen extends StatelessWidget {
       title: 'PageView.builder',
       builder: (context) => const Onbordscreen(),
     ),
-    widgetExample(
-      title: 'ListView',
-      builder: (context) => const Listwiew(),
-    ),
+
     widgetExample(
       title: 'ListViewBulder',
       builder: (context) => const ListviewBulder(),
@@ -63,7 +80,15 @@ class HomeScreen extends StatelessWidget {
     ),
     widgetExample(
       title: 'parallax',
-      builder: (p0) => MyParllax(),
+      builder: (context) => MyParllax(),
+    ),
+    widgetExample(
+      title: 'Custam widgets',
+      builder: (context) => const CustamWidgets(),
+    ),
+    widgetExample(
+      title: 'ResponsiveLayout',
+      builder: (context) => const HomePage(),
     )
   ];
 
@@ -111,6 +136,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
+// ignore: camel_case_types
 class widgetExample {
   final String title;
   final Widget Function(BuildContext) builder;

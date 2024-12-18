@@ -55,11 +55,7 @@ class _ListviewBulderState extends State<ListviewBulder> {
                 ),
               );
             },
-            child: Container(
-              decoration: BoxDecoration(
-                color: Colors.white10,
-                border: Border.all(color: Colors.grey),
-              ),
+            child: Card(
               child: Padding(
                 padding: EdgeInsets.only(left: 30),
                 child: Row(

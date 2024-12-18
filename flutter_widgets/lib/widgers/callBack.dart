@@ -1,3 +1,4 @@
+
 import 'package:flutter/material.dart';
 
 
@@ -37,7 +38,6 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
 
 callBack(){
-  print('Clicked');
 }
 
 
@@ -53,7 +53,7 @@ callBack(){
       ),
       body: ElevatedButton(onPressed: () {
         callBack();
-      }, child: Text('Click me!')),
+      }, child: const Text('Click me!')),
     );
   }
 }

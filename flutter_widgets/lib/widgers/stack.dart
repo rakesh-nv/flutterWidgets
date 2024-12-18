@@ -14,18 +14,35 @@ class _stackState extends State<stackWidget> {
     return Scaffold(
       appBar: AppBar(),
       body: Container(
-        width: 300,
-        height: 300,
+        //color: Colors.red,
+        width: 500,
+        height: 400,
         child: Stack(
           children: [
             Container(
               height: 200,
               width: 200,
               color: Colors.blueGrey,
-            ), Positioned(
-              left: 21,
-              top: 21,
-
+            ),Positioned(
+              left: 40,
+              top: 40,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.blue,
+              ),
+            ),Positioned(
+              left: 70,
+              top: 70,
+              child: Container(
+                height: 200,
+                width: 200,
+                color: Colors.purple,
+              ),
+            ),
+            Positioned(
+              left: 100,
+              top: 100,
               child: Container(
                 height: 200,
                 width: 200,

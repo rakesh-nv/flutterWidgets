@@ -13,14 +13,13 @@ class _CardsState extends State<Cards> {
     return Scaffold(
       appBar: AppBar(
           backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-          title: Text('Cards')),
+          title: const Text('Cards')),
       body: Center(
         child: SizedBox(
           height: 200,
           width: 150,
           child: InkWell(
             onTap: () {
-              print('hello');
             },
             child: const Card(
               shape: BeveledRectangleBorder(

@@ -131,6 +131,7 @@ class _MyParllaxState extends State<MyParllax> {
 class ParallaxWidget extends StatelessWidget {
   final double top;
   final String asset;
+  
   const ParallaxWidget({
     super.key,
     required this.top,
@@ -139,12 +140,14 @@ class ParallaxWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final currentWidth = MediaQuery.of(context).size.width;
+
     return Positioned(
       left: -45,
       top: top,
       child: Container(
         height: 600,
-        width: 700,
+        width: currentWidth < 600 ? 750 : 1600,
         child: Image.asset("assets/parllax/$asset.png", fit: BoxFit.cover),
       ),
     );
