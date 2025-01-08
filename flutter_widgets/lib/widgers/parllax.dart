@@ -100,9 +100,7 @@ class _MyParllaxState extends State<MyParllax> {
                             letterSpacing: 1.8,
                             color: Color(0xffffaf00)),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
+                      SizedBox(height: 20),
                       SizedBox(
                         width: 190,
                         child: Divider(
@@ -113,9 +111,7 @@ class _MyParllaxState extends State<MyParllax> {
                       SizedBox(
                         height: 20,
                       ),
-                      SizedBox(
-                        height: 50,
-                      )
+                      SizedBox(height: 50),
                     ],
                   ),
                 ),
@@ -131,7 +127,7 @@ class _MyParllaxState extends State<MyParllax> {
 class ParallaxWidget extends StatelessWidget {
   final double top;
   final String asset;
-  
+
   const ParallaxWidget({
     super.key,
     required this.top,
@@ -143,11 +139,11 @@ class ParallaxWidget extends StatelessWidget {
     final currentWidth = MediaQuery.of(context).size.width;
 
     return Positioned(
-      left: -45,
+      left: -100,
       top: top,
       child: Container(
         height: 600,
-        width: currentWidth < 600 ? 750 : 1600,
+        width: currentWidth < 600 ? 750 : 1540,
         child: Image.asset("assets/parllax/$asset.png", fit: BoxFit.cover),
       ),
     );

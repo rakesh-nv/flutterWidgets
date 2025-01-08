@@ -27,9 +27,10 @@ class _snackBarState extends State<snackBar> {
                   },
                 ),
                 shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20)),
+                  borderRadius: BorderRadius.circular(20),
+                ),
                 content: Text("This is an error"),
-                duration: const Duration(milliseconds: 3000),
+                duration: const Duration(milliseconds: 2000),
                 backgroundColor: Colors.red,
               );
               ScaffoldMessenger.of(context).showSnackBar(snackBar);

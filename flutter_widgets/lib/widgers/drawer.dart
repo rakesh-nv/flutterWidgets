@@ -20,7 +20,7 @@ class _DrawerWiState extends State<DrawerWi> {
               DrawerHeader(
                 padding: EdgeInsets.zero,
                 child: Container(
-                  color: Colors.red,
+                  //color: Colors.red,
                   padding: EdgeInsets.all(10),
                   child: const Row(
                     children: [
@@ -34,38 +34,62 @@ class _DrawerWiState extends State<DrawerWi> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text("mark zuckerberg",style: TextStyle(fontSize:15,fontWeight: FontWeight.bold),),
-                          Text("mark@gmail.com",style: TextStyle(fontSize: 12),)
-
+                          Text(
+                            "mark zuckerberg",
+                            style: TextStyle(
+                                fontSize: 15, fontWeight: FontWeight.bold),
+                          ),
+                          Text(
+                            "mark@gmail.com",
+                            style: TextStyle(fontSize: 12),
+                          )
                         ],
                       )
                     ],
                   ),
                 ),
               ),
-              const ListTile(
-                title: Text("my files"),
-                leading: Icon(Icons.folder),
+              ListTile(
+                title: const Text("my files"),
+                leading: const Icon(Icons.folder),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              const ListTile(
-                title: Text("Shared with me"),
-                leading: Icon(Icons.group),
+              ListTile(
+                title: const Text("Shared with me"),
+                leading: const Icon(Icons.group),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              const ListTile(
-                title: Text("Starred"),
-                leading: Icon(Icons.star),
+              ListTile(
+                title: const Text("Starred"),
+                leading: const Icon(Icons.star),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              const ListTile(
-                title: Text("Trash"),
-                leading: Icon(Icons.delete),
+              ListTile(
+                title: const Text("Trash"),
+                leading: const Icon(Icons.delete),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              const ListTile(
-                title: Text("Uplode"),
-                leading: Icon(Icons.upload),
+              ListTile(
+                title: const Text("Uplode"),
+                leading: const Icon(Icons.upload),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
-              const ListTile(
-                title: Text("logout"),
-                leading: Icon(Icons.logout),
+              ListTile(
+                title: const Text("logout"),
+                leading: const Icon(Icons.logout),
+                onTap: () {
+                  Navigator.pop(context);
+                },
               ),
             ],
           ),

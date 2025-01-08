@@ -3,14 +3,20 @@ import 'package:flutter_widgets/CustamWidgit/widgits/CustamWidget.dart';
 import 'package:flutter_widgets/responsive/homePage.dart';
 import 'package:flutter_widgets/widgers/DateAndTime.dart';
 import 'package:flutter_widgets/widgers/GridView.dart';
-import 'package:flutter_widgets/widgers/bottomNavBar.dart';
+import 'package:flutter_widgets/widgers/alertdialogBox.dart';
+import 'package:flutter_widgets/widgers/animated_text.dart';
+import 'package:flutter_widgets/widgers/bottomSheet.dart';
+import 'package:flutter_widgets/widgers/bottomnav.dart';
 import 'package:flutter_widgets/widgers/cards.dart';
 import 'package:flutter_widgets/widgers/dismissible.dart';
 import 'package:flutter_widgets/widgers/drawer.dart';
+import 'package:flutter_widgets/widgers/dropdown.dart';
+import 'package:flutter_widgets/widgers/formWidget.dart';
 import 'package:flutter_widgets/widgers/listview.buldar.dart';
 import 'package:flutter_widgets/widgers/parllax.dart';
 import 'package:flutter_widgets/widgers/snackBar.dart';
 import 'package:flutter_widgets/widgers/stack.dart';
+import 'package:flutter_widgets/widgers/tabBar.dart';
 import 'widgers/onbordScreen.dart';
 
 void main() {
@@ -39,9 +45,39 @@ class MyApp extends StatelessWidget {
 class HomeScreen extends StatelessWidget {
   final List<widgetExample> example = [
     widgetExample(
+      title: 'Tab bar',
+      builder: (context) => TabBarWidget(),
+    ),
+    widgetExample(
+      title: "Bottom Navbar",
+      builder: (context) => bottomNabBar(),
+    ),
+    widgetExample(
+      title: "Form",
+      builder: (context) => FormWidget(),
+    ),
+    widgetExample(
+      title: "Dropdown",
+      builder: (context) => Dropdown(),
+    ),
+    widgetExample(
+      title: "Alert Dialog",
+      builder: (context) => const alartDilogBox(),
+    ),
+    widgetExample(
+      title: "Animated Text",
+      builder: (context) => const animatedText(),
+    ),
+    widgetExample(
+      title: "Bottom Sheet",
+      builder: (context) => const bottomSheet(),
+    ),
+
+    widgetExample(
       title: 'Drawer',
       builder: (context) => const DrawerWi(),
-    ), widgetExample(
+    ),
+    widgetExample(
       title: 'SnackBar',
       builder: (context) => const snackBar(),
     ),
@@ -103,7 +139,7 @@ class HomeScreen extends StatelessWidget {
       ),
       body: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2,
+          crossAxisCount: 3,
           childAspectRatio: 1,
           mainAxisSpacing: 9,
         ),

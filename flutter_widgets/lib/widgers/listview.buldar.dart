@@ -42,7 +42,6 @@ class _ListviewBulderState extends State<ListviewBulder> {
       ),
     ];
     return Scaffold(
-      appBar: AppBar(),
       // ... existing code ...
       body: ListView.builder(
         itemBuilder: (context, index) {

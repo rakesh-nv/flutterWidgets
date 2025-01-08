@@ -14,9 +14,6 @@ class _DismissibleWiState extends State<DismissibleWi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Dismissable'),
-      ),
       body: ListView.builder(
         itemBuilder: (context, index) {
           final fruit = fruits[index];
@@ -27,6 +24,7 @@ class _DismissibleWiState extends State<DismissibleWi> {
                   SnackBar(
                     content: Text(fruits[index]),
                     backgroundColor: Colors.red,
+                    duration: const Duration(milliseconds: 600),
                   ),
                 );
               } else {
@@ -34,6 +32,7 @@ class _DismissibleWiState extends State<DismissibleWi> {
                   SnackBar(
                     content: Text(fruits[index]),
                     backgroundColor: Colors.green,
+                    duration: const Duration(milliseconds: 600),
                   ),
                 );
               }

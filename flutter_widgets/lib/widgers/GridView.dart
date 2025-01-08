@@ -29,13 +29,7 @@ class _GridviewState extends State<Gridview> {
     ];
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('GridView'),
-      ),
-
       // Dynamically creating grid and coloring
-
       body: GridView.builder(
         itemBuilder: (context, index) {
           return Container(
