@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/main.dart';
 
 class Dropdown extends StatefulWidget {
   const Dropdown({super.key});

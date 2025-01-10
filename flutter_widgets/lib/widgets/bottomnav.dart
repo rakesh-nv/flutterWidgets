@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_widgets/widgers/stack.dart';
+import 'package:flutter_widgets/widgets/stack.dart';
 
 import 'GridView.dart';
 import 'cards.dart';

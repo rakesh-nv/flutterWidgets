@@ -1,24 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_widgets/CustamWidgit/widgits/CustamWidget.dart';
 import 'package:flutter_widgets/responsive/homePage.dart';
-import 'package:flutter_widgets/widgers/DateAndTime.dart';
-import 'package:flutter_widgets/widgers/GridView.dart';
-import 'package:flutter_widgets/widgers/alertdialogBox.dart';
-import 'package:flutter_widgets/widgers/animated_text.dart';
-import 'package:flutter_widgets/widgers/bottomSheet.dart';
-import 'package:flutter_widgets/widgers/bottomnav.dart';
-import 'package:flutter_widgets/widgers/cards.dart';
-import 'package:flutter_widgets/widgers/dismissible.dart';
-import 'package:flutter_widgets/widgers/drawer.dart';
-import 'package:flutter_widgets/widgers/dropdown.dart';
-import 'package:flutter_widgets/widgers/formWidget.dart';
-import 'package:flutter_widgets/widgers/listview.buldar.dart';
-import 'package:flutter_widgets/widgers/parllax.dart';
-import 'package:flutter_widgets/widgers/snackBar.dart';
-import 'package:flutter_widgets/widgers/stack.dart';
-import 'package:flutter_widgets/widgers/tabBar.dart';
-import 'widgers/onbordScreen.dart';
-
+import 'package:flutter_widgets/widgets/DateAndTime.dart';
+import 'package:flutter_widgets/widgets/GridView.dart';
+import 'package:flutter_widgets/widgets/alertdialogBox.dart';
+import 'package:flutter_widgets/widgets/animated_text.dart';
+import 'package:flutter_widgets/widgets/bottomSheet.dart';
+import 'package:flutter_widgets/widgets/bottomnav.dart';
+import 'package:flutter_widgets/widgets/cards.dart';
+import 'package:flutter_widgets/widgets/dismissible.dart';
+import 'package:flutter_widgets/widgets/drawer.dart';
+import 'package:flutter_widgets/widgets/dropdown.dart';
+import 'package:flutter_widgets/widgets/formWidget.dart';
+import 'package:flutter_widgets/widgets/imagePickerWidget.dart';
+import 'package:flutter_widgets/widgets/listview.buldar.dart';
+import 'package:flutter_widgets/widgets/onbordScreen.dart';
+import 'package:flutter_widgets/widgets/parllax.dart';
+import 'package:flutter_widgets/widgets/snackBar.dart';
+import 'package:flutter_widgets/widgets/stack.dart';
+import 'package:flutter_widgets/widgets/tabBar.dart';
 void main() {
   return runApp(const MyApp());
 }
@@ -44,6 +44,10 @@ class MyApp extends StatelessWidget {
 
 class HomeScreen extends StatelessWidget {
   final List<widgetExample> example = [
+    widgetExample(
+      title: 'Image picker',
+      builder: (context) => ImagePickerWidget(),
+    ),
     widgetExample(
       title: 'Tab bar',
       builder: (context) => TabBarWidget(),
