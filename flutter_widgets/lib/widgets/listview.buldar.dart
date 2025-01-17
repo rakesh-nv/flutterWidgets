@@ -57,7 +57,7 @@ class _ListviewBulderState extends State<ListviewBulder> {
             },
             child: Card(
               child: Padding(
-                padding: EdgeInsets.only(left: 30),
+                padding: const EdgeInsets.only(left: 30),
                 child: Row(
                   children: [
                     const CircleAvatar(

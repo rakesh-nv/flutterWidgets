@@ -46,7 +46,10 @@ class _OnbordscreenState extends State<Onbordscreen> {
           children: [
             Align(
               alignment: Alignment.topRight,
-              child: TextButton(onPressed: () {}, child: Text('Skip')),
+              child: TextButton(
+                onPressed: () {},
+                child: Text('Skip'),
+              ),
             ),
             Expanded(
               child: PageView.builder(
